@@ -12,7 +12,7 @@ pipeline {
     }
     stage('cat README') {
         when {
-          branch "fix-"
+          branch "fix-*"
         }
           steps {
             sh '''
