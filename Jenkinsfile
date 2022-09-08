@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'built-in node'}
+  agent {label 'built-in'}
   options {
     buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr : '5', daysToKeepStr: '', numToKeepStr: '5'))
     disableConcurrentBuilds()
