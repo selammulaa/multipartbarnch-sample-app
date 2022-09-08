@@ -6,9 +6,19 @@ pipeline {
   }
   stages {
     stage('Hello') {
-      steps {
-        echo "hello"
-      }
+          steps {
+            echo "hello"
+          }
+    }
+    stage('cat README') {
+        when {
+          branch "fix-"
+        }
+          steps {
+            sh '''
+                cat README.md
+            '''
+        }
     }
   }
 }
